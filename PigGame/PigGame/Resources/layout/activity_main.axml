@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/relativeLayout1">
+    <TextView
+        android:text="The Pig Game!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/headerLabel" />
+    <TextView
+        android:text="Player 1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="170.0dp"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/headerLabel"
+        android:id="@+id/player1Label"
+        android:layout_marginTop="14.0dp"
+        android:layout_marginLeft="14.0dp" />
+    <TextView
+        android:text="Player 2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="170.0dp"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/headerLabel"
+        android:id="@+id/player1Label"
+        android:layout_marginLeft="202.5dp"
+        android:layout_marginTop="14.0dp"
+        android:layout_marginRight="14.0dp" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/player1Label"
+        android:id="@+id/space1" />
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="170.0dp"
+        android:layout_height="40.0dp"
+        android:text="editText1"
+        android:layout_below="@id/space1"
+        android:layout_marginLeft="14.0dp"
+        android:textAlignment="center"
+        android:id="@+id/textInputEditText1" />
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="170.0dp"
+        android:layout_height="40.0dp"
+        android:text="editText2"
+        android:layout_below="@id/space1"
+        android:layout_marginLeft="202.5dp"
+        android:layout_marginRight="14.0dp"
+        android:textAlignment="center"
+        android:id="@+id/textInputEditText2" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/textInputEditText2"
+        android:id="@+id/space2" />
+    <TextView
+        android:text="Score"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="170.0dp"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space2"
+        android:id="@+id/scoreLabel1"
+        android:layout_marginLeft="14.0dp" />
+    <TextView
+        android:text="Score"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="170.0dp"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space2"
+        android:id="@+id/scoreLabel1"
+        android:layout_marginRight="14.0dp"
+        android:layout_marginLeft="202.5dp" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/scoreLabel1"
+        android:id="@+id/space3" />
+    <TextView
+        android:text="Score Label"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="170.0dp"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space3"
+        android:id="@+id/scoreTextView1"
+        android:layout_marginLeft="14.0dp" />
+    <TextView
+        android:text="Score label"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="170.0dp"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space3"
+        android:id="@+id/scoreTextView2"
+        android:layout_marginRight="14.0dp"
+        android:layout_marginLeft="202.5dp" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/scoreTextView2"
+        android:id="@+id/space4" />
+    <TextView
+        android:text="Whoever's Turn"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/whosTurnLabel" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/whosTurnLabel"
+        android:id="@+id/space5" />
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space5"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView1" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/imageView1"
+        android:id="@+id/space6" />
+    <TextView
+        android:text="Points for this turn"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space6"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/pointsForTurnLabel" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/pointsForTurnLabel"
+        android:id="@+id/space7" />
+    <TextView
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dp"
+        android:textAlignment="center"
+        android:layout_below="@id/space7"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/pointsForTurnTextView" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/pointsForTurnTextView"
+        android:id="@+id/space8" />
+    <Button
+        android:text="Roll Die"
+        android:layout_width="170.0dp"
+        android:layout_height="60.0dp"
+        android:layout_below="@id/space8"
+        android:layout_marginLeft="14.0dp"
+        android:textAlignment="center"
+        android:id="@+id/rollButton" />
+    <Button
+        android:text="End Turn"
+        android:layout_width="170.0dp"
+        android:layout_height="60.0dp"
+        android:layout_below="@id/space8"
+        android:textAlignment="center"
+        android:layout_marginLeft="202.5dp"
+        android:layout_marginRight="14.0dp"
+        android:id="@+id/endTurnButton" />
+    <android.support.v4.widget.Space
+        android:layout_width="380.0dp"
+        android:layout_height="10.0dp"
+        android:layout_below="@id/endTurnButton"
+        android:id="@+id/space9" />
+    <Button
+        android:text="New Game"
+        android:layout_width="170.0dp"
+        android:layout_height="60.0dp"
+        android:layout_below="@id/space9"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/newGameButton" />
+</RelativeLayout>
