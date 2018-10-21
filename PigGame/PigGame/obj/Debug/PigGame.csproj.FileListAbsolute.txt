@@ -72,5 +72,6 @@ C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debu
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\System.Runtime.Serialization.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\System.Xml.pdb
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\pig.png
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debug\PigGame.dll
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\linksrc\PigGame.dll.mdb

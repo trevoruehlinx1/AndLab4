@@ -34,11 +34,12 @@ namespace PigGame
             string player2Name = "";
             rollButton.Enabled = false;
             endTurnButton.Enabled = false;
-
+            diceImageView.SetImageResource(Resource.Drawable.pig);
 
 
             newGameButton.Click += (sender, e) =>
             {
+                diceImageView.SetImageResource(Resource.Drawable.pig);
                 gameLogic = new PigGameLogic();
                 if (nameEditText1.Enabled == true && nameEditText1.Text == ""
                     || nameEditText2.Text == "" && nameEditText2.Enabled == true)
@@ -52,6 +53,7 @@ namespace PigGame
                     endTurnButton.Enabled = true;
                     player1Name = nameEditText1.Text;
                     player2Name = nameEditText2.Text;
+                    gameLogic.GetPlayerNames(player1Name, player2Name);
                     score1Label.Text = player1Name + "'s Score";
                     score2Label.Text = player2Name + "'s Score";
                     scoreTextView1.Text = gameLogic.Player1Score.ToString();
@@ -65,19 +67,37 @@ namespace PigGame
             };
             rollButton.Click += (sender, e) =>
             {
-                pointsForTurnTextView.Text = gameLogic.RollDie().ToString();
+                var roll = gameLogic.RollDie();
+                if (roll != "0")
+                    pointsForTurnTextView.Text = roll;
+                else
+                {
+                    rollButton.Enabled = false;
+                    whosTurnLabel.Text = "You rolled a 1";
+                    pointsForTurnTextView.Text = roll;
+                }
                 diceImageView.SetImageResource(gameLogic.SetDiceImage());
             };
             endTurnButton.Click += (sender, e) =>
             {
                 gameLogic.EndTurn();
-                scoreTextView1.Text = gameLogic.Player1Score.ToString();
-                scoreTextView2.Text = gameLogic.Player2Score.ToString();
-                pointsForTurnTextView.Text = gameLogic.PointsForTurn.ToString();
-                if (gameLogic.player1Turn == true)
-                    whosTurnLabel.Text = player1Name + "'s Turn";
+                rollButton.Enabled = true;
+                if (gameLogic.CheckForWinner() != "")
+                {
+                    whosTurnLabel.Text = gameLogic.CheckForWinner();
+                    rollButton.Enabled = false;
+                    endTurnButton.Enabled = false;
+                }
                 else
-                whosTurnLabel.Text = player2Name + "'s Turn";
+                {
+                    scoreTextView1.Text = gameLogic.Player1Score.ToString();
+                    scoreTextView2.Text = gameLogic.Player2Score.ToString();
+                    pointsForTurnTextView.Text = gameLogic.PointsForTurn.ToString();
+                    if (gameLogic.player1Turn == true)
+                        whosTurnLabel.Text = player1Name + "'s Turn";
+                    else
+                        whosTurnLabel.Text = player2Name + "'s Turn";
+                }
             };
             newPlayersButton.Click += (sender, e) =>
             {
@@ -89,6 +109,8 @@ namespace PigGame
                 score2Label.Text = "";
                 scoreTextView1.Text = "";
                 scoreTextView2.Text = "";
+                rollButton.Enabled = false;
+                endTurnButton.Enabled = false;
                 whosTurnLabel.Text = "Enter a name for each of the players";
             };
         }

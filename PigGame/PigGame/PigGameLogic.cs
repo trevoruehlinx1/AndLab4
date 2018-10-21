@@ -15,6 +15,8 @@ namespace PigGame
     class PigGameLogic
     {
         public bool player1Turn = true;
+        public string player1Name { get; set; }
+        public string player2Name { get; set; }
         public int Player1Score { get; set; }
         public int Player2Score { get; set; }
         public int PointsForTurn { get; set; }
@@ -25,8 +27,10 @@ namespace PigGame
         {
             Random random = new Random();
             RollValue = random.Next(1, 6);
-
-            PointsForTurn += RollValue;
+            if (RollValue == 1)
+                PointsForTurn = 0;
+            else
+                PointsForTurn += RollValue;
             return PointsForTurn.ToString();
         }
 
@@ -34,16 +38,41 @@ namespace PigGame
         {
             if (player1Turn == true)
             {
-                Player1Score += PointsForTurn;
-                player1Turn = false;
+                if (Player1Score + PointsForTurn <= 10)
+                {
+                    Player1Score += PointsForTurn;
+                    player1Turn = false;
+                }
+                else
+                    player1Turn = false;
                 PointsForTurn = 0;
             }
             else
             {
-                Player2Score += PointsForTurn;
-                player1Turn = true;
+                if(Player2Score + PointsForTurn <= 10)
+                {
+                    Player2Score += PointsForTurn;
+                    player1Turn = true;
+                }
+                else
+                    player1Turn = true;
                 PointsForTurn = 0;
             }
+            CheckForWinner();
+        }
+        public void GetPlayerNames(string name1, string name2)
+        {
+            player1Name = name1;
+            player2Name = name2;
+        }
+        public string CheckForWinner()
+        {
+            if (Player1Score == 10)
+                return player1Name + " wins the game";
+            if (Player2Score == 10)
+                return player2Name + " wins the game!";
+            else
+                return "";
         }
         public int SetDiceImage()
         {

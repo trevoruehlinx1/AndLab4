@@ -24,6 +24,10 @@ namespace PigGame
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
+		public static void UpdateIdValues()
+		{
+		}
+		
 		public partial class Animation
 		{
 			
@@ -2301,6 +2305,9 @@ namespace PigGame
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
+			// aapt resource value: 0x7F010008
+			public const int pig = 2130771976;
+			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
 			
@@ -2595,6 +2602,9 @@ namespace PigGame
 			
 			// aapt resource value: 0x7F020002
 			public const int relativeLayout1 = 2130837506;
+			
+			// aapt resource value: 0x7F020028
+			public const int relativeLayout2 = 2130837544;
 			
 			// aapt resource value: 0x7F0C0054
 			public const int right = 2131492948;

@@ -3,4 +3,168 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout2">
+    <TextView
+        android:text="The Pig Game!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/headerLabel" />
+    <TextView
+        android:text="Player 1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/headerLabel"
+        android:id="@+id/player1Label"
+        android:layout_marginTop="2.0dp"
+        android:layout_marginLeft="36.5dp" />
+    <TextView
+        android:text="Player 2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/headerLabel"
+        android:id="@+id/player1Label"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0.0dp"
+        android:layout_marginRight="36.5dp" />
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="170.0dp"
+        android:layout_height="40.5dp"
+        android:text=""
+        android:layout_below="@id/player1Label"
+        android:layout_marginLeft="20.0dp"
+        android:textAlignment="textStart"
+        android:id="@+id/textInputEditText1"
+        android:layout_marginTop="15.5dp" />
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="170.0dp"
+        android:layout_height="40.5dp"
+        android:text=""
+        android:layout_below="@id/player1Label"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20.0dp"
+        android:textAlignment="textStart"
+        android:id="@+id/textInputEditText2"
+        android:layout_marginTop="15.5dp" />
+    <TextView
+        android:text="Player 1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/textInputEditText1"
+        android:id="@+id/scoreLabel1"
+        android:layout_marginLeft="36.5dp"
+        android:layout_marginTop="0.0dp" />
+    <TextView
+        android:text="Player 2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textAlignment="center"
+        android:layout_below="@id/textInputEditText1"
+        android:id="@+id/scoreLabel2"
+        android:layout_marginRight="36.5dp" />
+    <TextView
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/scoreLabel1"
+        android:id="@+id/scoreTextView1"
+        android:layout_marginLeft="66.5dp" />
+    <TextView
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textAlignment="center"
+        android:layout_below="@id/scoreLabel1"
+        android:id="@+id/scoreTextView2"
+        android:layout_marginRight="66.5dp" />
+    <TextView
+        android:text="Welcome to the Pig Game!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/headerLabel"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/whosTurnLabel"
+        android:shadowColor="@android:color/holo_red_light" />
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/whosTurnLabel"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/diceImageView"
+        android:minHeight="90dp"
+        android:minWidth="90dp"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="0.0dp" />
+    <TextView
+        android:text="Points for this turn"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/diceImageView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/pointsForTurnLabel" />
+    <TextView
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/pointsForTurnLabel"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/pointsForTurnTextView" />
+    <Button
+        android:text="Roll Die"
+        android:layout_width="120.0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pointsForTurnTextView"
+        android:layout_marginLeft="20.0dp"
+        android:textAlignment="center"
+        android:id="@+id/rollButton" />
+    <Button
+        android:text="End Turn"
+        android:layout_width="120.0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pointsForTurnTextView"
+        android:textAlignment="center"
+        android:layout_marginLeft="138.5dp"
+        android:layout_marginRight="0.0dp"
+        android:id="@+id/endTurnButton" />
+    <Button
+        android:text="New Game"
+        android:layout_width="120.0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pointsForTurnTextView"
+        android:layout_alignParentRight="true"
+        android:textAlignment="center"
+        android:layout_marginRight="138.5dp"
+        android:id="@+id/newGameButton" />
+    <Button
+        android:text="New Players"
+        android:layout_width="120.0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pointsForTurnTextView"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="0.0dp"
+        android:layout_marginRight="20.0dp"
+        android:id="@+id/newPlayersPuttonButton" />
+</RelativeLayout>
