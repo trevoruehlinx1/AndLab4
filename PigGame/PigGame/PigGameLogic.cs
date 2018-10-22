@@ -14,13 +14,28 @@ namespace PigGame
 {
     class PigGameLogic
     {
-        public bool player1Turn = true;
-        public string player1Name { get; set; }
-        public string player2Name { get; set; }
+        public PigGameLogic()
+        {
+
+        }
+        public PigGameLogic(string name1, string name2, int score1, int score2, Boolean turn, int turnPoints, int lastRoll)
+        {
+            Player1Name = name1;
+            Player2Name = name2;
+            Player1Score = score1;
+            Player2Score = score2;
+            Player1Turn = turn;
+            PointsForTurn = turnPoints;
+            RollValue = lastRoll;
+        }
+        public Boolean Player1Turn = true;
+        public string Player1Name { get; set; }
+        public string Player2Name { get; set; }
         public int Player1Score { get; set; }
         public int Player2Score { get; set; }
         public int PointsForTurn { get; set; }
         public int RollValue { get; set; }
+        
 
 
         public string RollDie()
@@ -36,15 +51,15 @@ namespace PigGame
 
         public void EndTurn()
         {
-            if (player1Turn == true)
+            if (Player1Turn == true)
             {
                 if (Player1Score + PointsForTurn <= 10)
                 {
                     Player1Score += PointsForTurn;
-                    player1Turn = false;
+                    Player1Turn = false;
                 }
                 else
-                    player1Turn = false;
+                    Player1Turn = false;
                 PointsForTurn = 0;
             }
             else
@@ -52,25 +67,25 @@ namespace PigGame
                 if(Player2Score + PointsForTurn <= 10)
                 {
                     Player2Score += PointsForTurn;
-                    player1Turn = true;
+                    Player1Turn = true;
                 }
                 else
-                    player1Turn = true;
+                    Player1Turn = true;
                 PointsForTurn = 0;
             }
             CheckForWinner();
         }
         public void GetPlayerNames(string name1, string name2)
         {
-            player1Name = name1;
-            player2Name = name2;
+            Player1Name = name1;
+            Player2Name = name2;
         }
         public string CheckForWinner()
         {
             if (Player1Score == 10)
-                return player1Name + " wins the game";
+                return Player2Name + " wins the game";
             if (Player2Score == 10)
-                return player2Name + " wins the game!";
+                return Player2Name + " wins the game!";
             else
                 return "";
         }

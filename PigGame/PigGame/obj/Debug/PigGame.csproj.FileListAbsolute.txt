@@ -2,7 +2,6 @@ C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debu
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debug\PigGame.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debug\PigGame.PigGame.apk
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debug\PigGame.PigGame-Signed.apk
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\PigGame.csprojAssemblyReference.cache
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\PigGame.csproj.CoreCompileInputs.cache
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\PigGame.dll
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\PigGame.pdb
@@ -30,6 +29,13 @@ C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debu
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\mipmap-xxxhdpi\ic_launcher_foreground.png
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\mipmap-xxxhdpi\ic_launcher_round.png
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\layout-land\activity_main.xml
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die1.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die2.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die3.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die4.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die5.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die6.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\pig.png
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\R.cs.flag
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\R.txt
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\uploadflags.txt
@@ -54,12 +60,6 @@ C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debu
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\linksrc\System.ServiceModel.Internals.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\linksrc\Mono.Security.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\linksrc\PigGame.dll.mdb
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die1.png
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die2.png
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die3.png
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die4.png
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die5.png
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\die6.png
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debug\PigGame.dll.mdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\PigGame.dll.mdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\Mono.Android.pdb
@@ -72,6 +72,6 @@ C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debu
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\System.Runtime.Serialization.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\android\assets\System.Xml.pdb
-C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\res\drawable\pig.png
+C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\PigGame.csprojAssemblyReference.cache
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\bin\Debug\PigGame.dll
 C:\Users\Trevor Uehlin\Documents\AndroidSolutions\Lab 4\PigGame\PigGame\obj\Debug\linksrc\PigGame.dll.mdb
