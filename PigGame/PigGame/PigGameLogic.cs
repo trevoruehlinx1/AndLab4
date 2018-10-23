@@ -91,6 +91,8 @@ namespace PigGame
         }
         public int SetDiceImage()
         {
+            if (RollValue == 0)
+                return Resource.Drawable.pig;
             int[] diceImages = new int[6]
             {
                 Resource.Drawable.Die1,
