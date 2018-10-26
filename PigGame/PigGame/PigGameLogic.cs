@@ -53,7 +53,7 @@ namespace PigGame
         {
             if (Player1Turn == true)
             {
-                if (Player1Score + PointsForTurn <= 10)
+                if (Player1Score + PointsForTurn <= 100)
                 {
                     Player1Score += PointsForTurn;
                     Player1Turn = false;
@@ -64,7 +64,7 @@ namespace PigGame
             }
             else
             {
-                if(Player2Score + PointsForTurn <= 10)
+                if(Player2Score + PointsForTurn <= 100)
                 {
                     Player2Score += PointsForTurn;
                     Player1Turn = true;
@@ -82,10 +82,15 @@ namespace PigGame
         }
         public string CheckForWinner()
         {
-            if (Player1Score == 10)
-                return Player2Name + " wins the game";
-            if (Player2Score == 10)
-                return Player2Name + " wins the game!";
+            if(Player1Turn == true)
+            {
+                if (Player1Score == 100)
+                    return Player2Name + " wins the game";
+                if (Player2Score == 100)
+                    return Player2Name + " wins the game!";
+                else
+                    return "";
+            }
             else
                 return "";
         }

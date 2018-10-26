@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
 using System;
+using Newtonsoft.Json;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -25,6 +26,7 @@ namespace PigGame
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            // create all of the views
             var newGameButton = FindViewById<Button>(Resource.Id.newGameButton);
             var rollButton = FindViewById<Button>(Resource.Id.rollButton);
             var newPlayersButton = FindViewById<Button>(Resource.Id.newPlayersPuttonButton);
@@ -39,16 +41,22 @@ namespace PigGame
             var pointsForTurnTextView = FindViewById<TextView>(Resource.Id.pointsForTurnTextView);
             var diceImageView = FindViewById<ImageView>(Resource.Id.diceImageView);
 
+            //if the game has been saved get the page out of the json
             if (savedInstanceState != null)
             {
-                player1Name = savedInstanceState.GetString("player1Name");
-                player2Name = savedInstanceState.GetString("player2Name");
-                player1Score = savedInstanceState.GetInt("player1Score");
-                player2Score = savedInstanceState.GetInt("player2Score");
-                Boolean player1Turn = savedInstanceState.GetBoolean("player1Turn");
-                pointsForTurn = savedInstanceState.GetInt("pointsForTurn");
-                lastRollValue = savedInstanceState.GetInt("lastRollValue");
-                gameLogic = new PigGameLogic(player1Name, player2Name, player1Score, player2Score, player1Turn, pointsForTurn, lastRollValue);
+                gameLogic = new PigGameLogic();
+                string jsonGame = savedInstanceState.GetString("pageInJson");
+                gameLogic = JsonConvert.DeserializeObject<PigGameLogic>(jsonGame);
+
+
+                //player1Name = savedInstanceState.GetString("player1Name");
+                //player2Name = savedInstanceState.GetString("player2Name");
+                //player1Score = savedInstanceState.GetInt("player1Score");
+                //player2Score = savedInstanceState.GetInt("player2Score");
+                //Boolean player1Turn = savedInstanceState.GetBoolean("player1Turn");
+                //pointsForTurn = savedInstanceState.GetInt("pointsForTurn");
+                //lastRollValue = savedInstanceState.GetInt("lastRollValue");
+                //gameLogic = new PigGameLogic(player1Name, player2Name, player1Score, player2Score, player1Turn, pointsForTurn, lastRollValue);
 
 
                 score1Label.Text = gameLogic.Player1Name + "'s Score";
@@ -69,6 +77,7 @@ namespace PigGame
             }
             else
             {
+                //Create a new game logic
                 gameLogic = new PigGameLogic();
                 player1Name = "";
                 player2Name = "";
@@ -163,14 +172,18 @@ namespace PigGame
             //string xmlPigGameLogic = writer.ToString();
             //outState.PutString("savedPageValues", xmlPigGameLogic);
 
-            outState.PutString("player1Name", gameLogic.Player1Name);
-            outState.PutString("player2Name", gameLogic.Player2Name);
-            outState.PutInt("player1Score", gameLogic.Player1Score);
-            outState.PutInt("player2Score", gameLogic.Player2Score);
-            outState.PutBoolean("player1Turn", gameLogic.Player1Turn);
-            outState.PutInt("pointsForTurn", gameLogic.PointsForTurn);
-            outState.PutInt("diceImage", gameLogic.SetDiceImage());
-            outState.PutInt("lastRollValue", gameLogic.RollValue);
+            string pageInJson = JsonConvert.SerializeObject(this.gameLogic, Formatting.Indented);
+            outState.PutString("pageInJson",pageInJson);
+            
+
+            //outState.PutString("player1Name", gameLogic.Player1Name);
+            //outState.PutString("player2Name", gameLogic.Player2Name);
+            //outState.PutInt("player1Score", gameLogic.Player1Score);
+            //outState.PutInt("player2Score", gameLogic.Player2Score);
+            //outState.PutBoolean("player1Turn", gameLogic.Player1Turn);
+            //outState.PutInt("pointsForTurn", gameLogic.PointsForTurn);
+            //outState.PutInt("diceImage", gameLogic.SetDiceImage());
+            //outState.PutInt("lastRollValue", gameLogic.RollValue);
 
             base.OnSaveInstanceState(outState);
         }
